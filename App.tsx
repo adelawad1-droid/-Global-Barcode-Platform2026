@@ -152,11 +152,11 @@ const App: React.FC = () => {
 
   const SelectionScreen = () => (
     <div className="min-h-[75vh] flex flex-col items-center justify-center px-4">
-      <div className="text-center mb-16 max-w-2xl">
-        <h2 className="text-4xl sm:text-5xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 leading-tight">
+      <div className="text-center mb-16 max-w-3xl w-full">
+        <h2 className="text-5xl sm:text-7xl font-black mb-8 pb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 leading-[1.3] px-2">
           {t.title}
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">
           {t.subtitle}
         </p>
       </div>

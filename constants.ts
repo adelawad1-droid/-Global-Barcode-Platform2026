@@ -3,7 +3,7 @@ import { Translation, Language } from './types';
 
 export const TRANSLATIONS: Record<Language, Translation> = {
   ar: {
-    title: 'منصة الباركود العالمية',
+    title: 'باركود مجاني',
     subtitle: 'أقوى أداة ويب مجانية لإنشاء كافة أنواع الرموز والباركود',
     qrTool: 'مولد رموز QR المطور',
     barcodeTool: 'مولد الباركود الاحترافي',
@@ -46,7 +46,7 @@ export const TRANSLATIONS: Record<Language, Translation> = {
     barcodeDesc: 'مولد الباركود والرموز عبر الويب الأكثر قدرة في العالم. يدعم كافة التنسيقات العالمية للمنتجات والتجارة الدولية.'
   },
   en: {
-    title: 'Global Barcode Platform',
+    title: 'Free Barcode',
     subtitle: "The world's most capable free web-based online barcode generator and QR Code generator.",
     qrTool: 'Advanced QR Generator',
     barcodeTool: 'Online Barcode Generator',

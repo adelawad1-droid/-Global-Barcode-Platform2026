@@ -4,12 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منصة الباركود العالمية | Global Barcode Platform</title>
+    <title>باركود مجاني | Free Barcode</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="أفضل أداة شاملة لإنشاء رموز QR والباركود بكافة أنواعها (EAN, UPC, Code 128, Data Matrix). جودة 4K مجانية تماماً. Complete tool for QR and Barcode generation. Supports all major formats." />
-    <meta name="keywords" content="QR Code, Barcode Generator, EAN-13, UPC, Code 128, Data Matrix, مولد باركود, إنشاء كيو ار, باركود منتجات, GS1-128, PDF417" />
-    <meta name="author" content="منصة الباركود العالمية" />
+    <meta name="description" content="باركود مجاني - أفضل أداة شاملة لإنشاء رموز QR والباركود بكافة أنواعها (EAN, UPC, Code 128, Data Matrix). جودة 4K مجانية تماماً." />
+    <meta name="keywords" content="باركود مجاني, QR Code, Barcode Generator, EAN-13, UPC, Code 128, Data Matrix, مولد باركود, إنشاء كيو ار, باركود منتجات" />
+    <meta name="author" content="باركود مجاني" />
     <meta name="robots" content="index, follow" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,11 +20,12 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- تم تغيير الخطوط هنا إلى IBM Plex Sans و IBM Plex Sans Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       :root {
-        --font-arabic: 'Cairo', sans-serif;
-        --font-english: 'Inter', sans-serif;
+        --font-arabic: 'IBM Plex Sans Arabic', sans-serif;
+        --font-english: 'IBM Plex Sans', sans-serif;
       }
       [dir="rtl"] { font-family: var(--font-arabic); }
       [dir="ltr"] { font-family: var(--font-english); }
@@ -38,10 +39,18 @@
       
       body {
         transition: background-color 0.3s ease, color 0.3s ease;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* تحسين ظهور الحروف المتدرجة لمنع القص */
+      .bg-clip-text {
+        padding-bottom: 0.1em;
+        margin-bottom: -0.1em;
+      }
     </style>
     <script type="importmap">
 {
@@ -54,7 +63,8 @@
     "jspdf": "https://esm.sh/jspdf@^2.5.1",
     "vite": "https://esm.sh/vite@^7.3.1",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "path": "https://esm.sh/path@^0.12.7"
+    "path": "https://esm.sh/path@^0.12.7",
+    "url": "https://esm.sh/url@^0.11.4"
   }
 }
 </script>

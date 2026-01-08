@@ -33,6 +33,7 @@ export interface BarcodeConfig {
 
 export interface Translation {
   title: string;
+  platformSubtitle: string;
   subtitle: string;
   qrTool: string;
   barcodeTool: string;

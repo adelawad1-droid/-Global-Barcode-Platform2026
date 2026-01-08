@@ -153,9 +153,14 @@ const App: React.FC = () => {
   const SelectionScreen = () => (
     <div className="min-h-[75vh] flex flex-col items-center justify-center px-4">
       <div className="text-center mb-16 max-w-3xl w-full">
-        <h2 className="text-5xl sm:text-7xl font-black mb-8 pb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 leading-[1.3] px-2">
-          {t.title}
-        </h2>
+        <div className="mb-8">
+          <h2 className="text-5xl sm:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 leading-[1.2] px-2">
+            {t.title}
+          </h2>
+          <p className="text-sm sm:text-base font-bold text-gray-400 dark:text-gray-500 mt-2 uppercase tracking-[0.2em]">
+            {t.platformSubtitle}
+          </p>
+        </div>
         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">
           {t.subtitle}
         </p>
@@ -207,9 +212,10 @@ const App: React.FC = () => {
             <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-2 rounded-xl text-white shadow-lg">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
             </div>
-            <div>
-              <h1 className="text-lg font-black dark:text-white leading-tight">{t.title}</h1>
-              {mode !== 'select' && <p className="text-[10px] text-blue-600 font-bold uppercase tracking-widest">{mode === 'qr' ? t.qrTool : t.barcodeTool}</p>}
+            <div className="flex flex-col">
+              <h1 className="text-lg font-black dark:text-white leading-none">{t.title}</h1>
+              <span className="text-[10px] text-gray-400 dark:text-gray-500 font-medium mt-0.5">{t.platformSubtitle}</span>
+              {mode !== 'select' && <p className="text-[10px] text-blue-600 font-bold uppercase tracking-widest mt-1">{mode === 'qr' ? t.qrTool : t.barcodeTool}</p>}
             </div>
           </div>
           
